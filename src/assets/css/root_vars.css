@@ -1,0 +1,16 @@
+/*/ ROOT /*/
+:root {
+    /* COLORS */
+    /* bg */
+    --primary-color-bg: #fffbeb; /*amber-50*/
+    --secondary-color-bg: #e0f2fe; /*sky-100*/
+    --tertiary-color-bg: #075985; /*sky-800*/
+    /* text */    
+    --primary-color-txt: #ffffff;
+    --secondary-color-txt: #075985; /*sky-800*/
+
+    --header-h: 120px;
+    --header-mob-h: 56px;
+    --h-el-below-header: calc(100vh - var(--header-h));
+    --h-el-below-header-mob: calc(100vh - var(--header-mob-h));
+}

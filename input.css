@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* più classi in comune */
+    .header-transition {
+        @apply transition;
+        @apply duration-500;
+    }
+    /* --- * --- * --- * --- */
+
+    /* VARIABILI DI STILE DEI COPONENTI (usate anche per gli EFFETTI) */
+
+    /* header */
+    #header.header--secondary,
+    #header.header--secondary .header__mob-head {
+        @apply bg-tertiary-bg;
+        @apply text-primary-text;
+    }
+    #header.header--secondary .book-btn--change-bg {
+        @apply bg-primary-text;
+    }
+    #header.header--secondary .book-btn--change-bg * {
+        @apply text-secondary-text;
+    }
+    #header.header--secondary .book-btn--change-bg *::before {
+        @apply bg-tertiary-bg;
+    }
+    /* 
+    #header.header--secondary rect,
+    #header.header--secondary path {
+        @apply fill-primary-text;
+    } 
+    */
+
+    /* book btn */
+    .book-btn.book-btn--secondary {
+        @apply bg-primary-text;
+    }
+    .book-btn.book-btn--fixed-mob {
+        @apply md:hidden;
+        @apply fixed;
+        @apply left-1/2;
+        @apply bottom-10;
+        @apply -translate-x-1/2;
+        @apply z-40;
+    }
+    .book-btn.book-btn--secondary .book-btn__txt {
+        @apply text-secondary-text;
+        @apply before:bg-secondary-text;
+    }
+
+    /* --- * --- * --- * --- */
+    
+    /* SOLO EFFETTI */
+
+    /* classi per svg, di base per gli effetti */
+    #header svg rect,
+    #header svg path {
+        @apply header-transition
+    }
+
+    /* effetto apertura/chiusura menu mobile */
+    body.stopScroll {
+        @apply overflow-hidden;
+        @apply h-full;
+        @apply md:overflow-auto;
+        @apply md:h-auto;
+    }
+    .header__mob-body.openMenu {
+        @apply translate-y-0;
+    }
+
+    /* --- * --- * --- * --- */
+}
