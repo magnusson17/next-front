@@ -3,6 +3,8 @@ import AllBlocchi from "@/components/blocchi/AllBlocchi";
 import clearString from "@/components/functions/clearString";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic"
+
 export default async function Pizzas() {
 
     const singlePage = await getSingleContent(process.env.GET_ALL_PAGES, "nid", 4)
