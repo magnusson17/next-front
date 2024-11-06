@@ -1,8 +1,13 @@
 // all contents
 export async function fetchRequest(endPoint) {
     try {
-        return await fetch(`${process.env.API_URL}/${endPoint}`)
-            .then(res => res.json())
+        return await fetch(`${process.env.API_URL}/${endPoint}`, {
+            headers: {
+                'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+                'Pragma': 'no-cache',
+                'Expires': '0'
+            }
+        }).then(res => res.json())
     } catch(error) {
         console.log(error)
     }
