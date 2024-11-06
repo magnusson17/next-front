@@ -1,11 +1,13 @@
 // all contents
 export async function fetchRequest(endPoint) {
-    try {
+    return await fetch(`${process.env.API_URL}/${endPoint}`)
+        .then(res => res.json())
+    /*try {
         return await fetch(`${process.env.API_URL}/${endPoint}`)
             .then(res => res.json())
     } catch(error) {
         console.log(error)
-    }
+    }*/
 }
 
 // single content
