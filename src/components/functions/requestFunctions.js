@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"
+
 // all contents
 export async function fetchRequest(endPoint) {
     try {
