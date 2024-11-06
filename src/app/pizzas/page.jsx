@@ -3,15 +3,12 @@ import AllBlocchi from "@/components/blocchi/AllBlocchi";
 import clearString from "@/components/functions/clearString";
 import Link from "next/link";
 
-export async function getServerSideProps() {
-    const singlePage = await getSingleContent(process.env.GET_ALL_PAGES, "nid", 4);
-    const blocchiIds = await arrayIdBlocchi(singlePage);
-    const pizzas = await fetchRequest(process.env.GET_ALL_PIZZAS);
+export default async function Pizzas() {
 
-    return { props: { singlePage, blocchiIds, pizzas } };
-}
+    const singlePage = await getSingleContent(process.env.GET_ALL_PAGES, "nid", 4)
+    const blocchiIds = await arrayIdBlocchi(singlePage)
+    const pizzas = await fetchRequest(process.env.GET_ALL_PIZZAS)
 
-export default function Pizzas({ singlePage, blocchiIds, pizzas }) {
     return (
         <main className="relative page-pizze">
             <h1>{singlePage.field_titolo_main}</h1>
