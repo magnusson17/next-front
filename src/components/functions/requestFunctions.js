@@ -1,13 +1,17 @@
+import { unstable_noStore } from "next/cache"
 // all contents
-export async function fetchRequest(endPoint) {
-    return await fetch(`${process.env.API_URL}/${endPoint}`)
-        .then(res => res.json())
-    /*try {
+/*export async function fetchRequest(endPoint) {
+    try {
         return await fetch(`${process.env.API_URL}/${endPoint}`)
             .then(res => res.json())
     } catch(error) {
         console.log(error)
-    }*/
+    }
+}*/
+export function fetchRequest(endPoint) {
+    unstable_noStore()
+    return fetch(`${process.env.API_URL}/${endPoint}`)
+        .then(res => res.json())
 }
 
 // single content
