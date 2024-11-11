@@ -1,5 +1,3 @@
-export const dynamic = "force-dynamic"
-
 import { fetchRequest, arrayIdBlocchi, getSingleContent } from "@/components/functions/requestFunctions";
 import AllBlocchi from "@/components/blocchi/AllBlocchi";
 import clearString from "@/components/functions/clearString";
