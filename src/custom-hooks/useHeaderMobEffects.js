@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
-import { closeMenuMobAndScroll, openCloseMenuMob } from '@/components/functions/headerEffects'
+import { closeMenuMobAndScroll, openCloseMenuMob } from '@/utils/headerEffects'
 
 export default function useHeaderMobEffects() {
     return (

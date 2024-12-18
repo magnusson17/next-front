@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
-import { addRemoveClass } from "@/components/functions/headerEffects"
+import { addRemoveClass } from "@/utils/headerEffects"
 
 export default function useHeaderGeneralEffects() {
     return (

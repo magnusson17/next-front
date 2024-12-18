@@ -1,3 +1,5 @@
+import LocaleSwitcher from "@/components/general/LocaleSwitcher"
+
 // MOB classes
 const navMobClassesArr = [
     // custom @layer
@@ -7,10 +9,10 @@ const navMobClassesArr = [
     "h-el-below-header-mob",
     "bg-tertiary-bg",
     // normal
-    "flex",
     "md:hidden",
+    "flex",
+    "flex-col",
     "justify-center",
-    "items-center",
     "items-center",
     "w-full",
     "-translate-y-full",
@@ -27,7 +29,10 @@ const ulMobClassesArr = [
 // DESK classes
 const navDeskClassesArr = [
     "hidden",
-    "md:block",
+    "md:flex",
+    "md:justify-between",
+    "md:items-center",
+    "md:w-full",
 ]
 const ulDeskClassesArr = [
     "flex",
@@ -45,6 +50,8 @@ export default function HeaderNav({children, mob}) {
             <ul className={`${mob ? ulMobClasses : ulDeskClasses}`}>
                 {children}
             </ul>
+
+            <LocaleSwitcher />
         </nav>
     )
 }

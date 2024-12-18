@@ -1,4 +1,4 @@
-import { fetchRequest } from "@/components/functions/requestFunctions";
+import { fetchRequest } from "@/utils/requestFunctions";
 
 import BloccoA from "@/components/blocchi/BloccoA";
 import BgBloccoA from "@/components/blocchi/elementiBloccoA/BgBloccoA";
@@ -6,15 +6,15 @@ import WrapperTestiBloccoA from "@/components/blocchi/elementiBloccoA/WrapperTes
 import DidascaliaBloccoA from "@/components/blocchi/elementiBloccoA/DidascaliaBloccoA";
 import BloccoB from "@/components/blocchi/BloccoB";
 
-import TitoloMain from "@/components/generals/texts/TitoloMain";
-import SoprattitoloMain from "@/components/generals/texts/SoprattitoloMain";
-import TitoloBlocco from "@/components/generals/texts/TitoloBlocco";
-import TestoMainBlocco from "@/components/generals/texts/TestoMainBlocco";
+import TitoloMain from "@/components/general/texts/TitoloMain";
+import SoprattitoloMain from "@/components/general/texts/SoprattitoloMain";
+import TitoloBlocco from "@/components/general/texts/TitoloBlocco";
+import TestoMainBlocco from "@/components/general/texts/TestoMainBlocco";
 
-export default async function AllBlocchi({blocchiIds}) {
+export default async function AllBlocchi({blocchiIds, lang}) {
 
     // fetcho TUTTI i paragraphs esistenti nel sito
-    const blocchi = await fetchRequest(process.env.GET_ALL_PARAGRAPHS)
+    const blocchi = await fetchRequest(process.env.GET_ALL_PARAGRAPHS, lang)
 
     return (
         <div className="all-blocchi">

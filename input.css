@@ -8,6 +8,10 @@
         @apply transition;
         @apply duration-500;
     }
+    .no-scroll {
+        @apply overflow-hidden;
+        @apply h-full;
+    }
     /* --- * --- * --- * --- */
 
     /* VARIABILI DI STILE DEI COPONENTI (usate anche per gli EFFETTI) */

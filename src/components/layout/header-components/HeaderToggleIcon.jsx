@@ -1,4 +1,4 @@
-import HamburgerMenuSvg from "@/components/generals/svg/HamburgerMenuSvg"
+import HamburgerMenuSvg from "@/components/general/svg/HamburgerMenuSvg"
 
 const classesArr = [
     // total custom

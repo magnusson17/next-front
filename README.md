@@ -106,7 +106,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
     -   In `page.jsx` chiamo la funzione `arrayIdBlocchi`
         -   Essa ritorna un array contenente gli id dei blocchi del content
         -   Salvo l'array in una const
-        -   Passo la const come props del component che stampa tutti i blocchi appartenenti al singolo content (`<AllBlocchi blocchiIds={blocchiIds} />`)
+        -   Passo la const come props del component che stampa tutti i blocchi appartenenti al singolo content (`<AllBlocchi blocchiIds={blocchiIds} lang={lang} />`)
     
     -   Definisco il component `AllBlocchi`
         -   Ha come props l'array contenente gli id dei blocchi del content
